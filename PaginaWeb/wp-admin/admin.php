@@ -38,7 +38,7 @@ if ( get_option('db_upgraded') ) {
 
 	/**
 	 * Fires on the next page load after a successful DB upgrade.
-	 *
+	 *File php admin
 	 * @since 2.8.0
 	 */
 	do_action( 'after_db_upgrade' );
