@@ -1,0 +1,111 @@
+<html class="html">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>BIDA - Login</title>
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<!-- <script src="js/login/login.nocache.js"></script> -->
+
+<script type="text/javascript" language="javascript" src="kansas_login/kansas_login.nocache.js"></script>
+
+<script src="js/deonjs/deonjs.nocache.js"></script>
+<script src="js/function.js"></script>
+<script src="js/deonjs.js"></script>
+<script src="js/main.js"></script>
+
+</head>
+<body>
+
+<header></header>
+<section>
+    <div id="dujo-login-container" class="container kansas-login text-center">
+        <div id="dujo-login-content" class="row">
+            <img src="img/logo.png">
+
+            <!-- LOGIN -->
+            <div id="login-form" class="col-xs-8 col-xs-offset-2">
+                <form class="col-xs-6">
+                    <div id="div-login-error" class="form-group text-left has-error">
+                        <h5 id="lb-login-error">El correo o la contraseña no coinciden / Por favor complete todos los campos</h5>
+                    </div>
+                    <div id="div-login-person" class="form-group">
+                        <div class="material-input has-error">
+                            <input type="text" required="" id="tb-login-user">
+                            <label>
+                                <span>Nombre de usuario</span>
+                            </label>
+                            <span class="help-block text-left">Mensaje de error</span>
+                        </div>
+                    </div>
+                    <div id="div-login-key" class="form-group">
+                        <div class="material-input has-error">
+                            <input type="text" required="" id="tb-login-password">
+                            <label>
+                                <span>Contraseña</span>
+                            </label>
+                            <span class="help-block text-left">Mensaje de error</span>
+                        </div>
+                    </div>
+                    <h4 class="pull-left"><a id="forgot-password-button" href="javascript:void(0)">¿Olvido su contraseña?</a></h4>
+                    <h4 class="pull-right"><button type="button" id="btn-session" class="light-blue-button">INGRESAR</button></h4>
+                </form>
+
+                <!-- REGISTRO -->
+                <div id="registry" class="col-xs-6 registry">
+                    <div class="text-center">
+                        <div>
+                            <h3>¿Aun no te has registrado?</h3>
+                            <p>Regístrese y de esta de manera rápida apoyara al Proyecto BIDA  que tiene como finalidad brindarle al centro de formalización de BBVA un área de BIG DATA, de esta manera gestionar mejor los grande modelos de datos de negocio que posee la compañía y relacionarlos con información de que nos brinda las redes sociales y de esta manera  poder obtener predicciones del comportamiento del mercado y las tendencias al usuario.</p>
+                            <a href="">Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OLVIDO CONTRASEÑA -->
+            <div id="forgot-password" class="hidden">
+                <p>Para restablecer la contraseña, introduce la dirección de correo electrónico</p>
+                <form class="col-xs-4 col-xs-offset-4">
+                    <div id="forgot-password-error-message" class="form-group text-left has-error hidden">
+                        <h5 id="lb-recovery-error">Ingrese un correo valido / El correo no esta registrado / Por favor complete el campo / Ocurrio un error, intentelo de nuevo</h5>
+                    </div>
+                    <div id="div-recovery-email" class="form-group has-error relative-position">
+                        <div class="material-input has-error">
+                            <input type="text" required="" id="tb-recovery-email">
+                            <label>
+                                <span>Correo Electrónico</span>
+                            </label>
+                            <span class="help-block text-left">Mensaje de error</span>
+                        </div>
+                    </div>
+                    <h4 class="pull-right"><button type="button" id="btn-recovery" class="light-blue-button">ENVIAR</button></h4>
+                    <h4 class="pull-right"><button type="button" id="btn-recovery-cancel" class="light-blue-button">CANCELAR</button></h4>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+
+    <!-- LEGALIDAD -->
+    <div class="container text-center">
+        <h6>© 2017 BIDA. Todos los derechos reservados | <a>Términos y Condiciones</a> - <a>Aviso Legal</a></h6>
+        <h6>v1.0</h6>
+    </div>
+</footer>
+
+</body>
+</html>
