@@ -1,0 +1,18 @@
+CREATE PROCEDURE spBulkInsert 
+AS BEGIN
+	BEGIN TRY
+
+		BULK INSERT dbo.t
+			FROM 'D:\import\data.txt'
+			WITH (FIELDTERMINATOR = ',', ROWTERMINATOR = '\n');
+
+		RETURN 0;
+	END TRY
+
+	BEGIN CATCH
+		DECLARE @ErrorMSG varchar(2000);
+		SET @ErrorMSG = ERROR_MESSAGE();
+		RAISERROR (@ErrorMSG, 16, 1);
+		RETURN -100;
+	END CATCH
+END;
