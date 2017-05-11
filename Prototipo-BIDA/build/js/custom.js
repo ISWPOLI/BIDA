@@ -702,7 +702,7 @@ if (typeof NProgress != 'undefined') {
 						"IOS"
 					],
 					datasets: [{
-						data: [15, 20, 30, 10, 30],
+						data: [20, 20, 20, 20, 20],
 						backgroundColor: [
 							"#BDC3C7",
 							"#9B59B6",
