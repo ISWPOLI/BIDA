@@ -10,13 +10,14 @@
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="TextView">
         <item name="android:textColor">@color/colorText</item>
         <item name="android:textStyle">bold</item>
         <item name="android:singleLine">false</item>
+        <item name="android:textSize">50px</item>
     </style>
 
 </resources>
