@@ -192,11 +192,11 @@
                 android:id="@+id/LayoutCombobox1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.41"
+                android:layout_weight="0.33"
                 android:orientation="vertical">
             </LinearLayout>
 
-            <!-- LAYOUT TEXTVIEW NOMBRE -->
+            <!-- LAYOUT TEXTVIEW AYUDA -->
             <LinearLayout
                 android:id="@+id/LayoutCombobox20"
                 android:layout_width="match_parent"
@@ -209,13 +209,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.4"
                     style="@style/TextView"
-                    android:text="Ingrese su nombre"/>
+                    android:text="¿Le fue de ayuda el app?"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.6"
-                    android:orientation="horizontal"></LinearLayout>
+
             </LinearLayout>
 
             <!-- LAYOUT COMBOBOX EDITTEXT -->
@@ -241,7 +237,7 @@
 
             </LinearLayout>
 
-            <!-- LAYOUT TEXTVIEW APELLIDO -->
+            <!-- LAYOUT TEXTVIEW DESEA -->
             <LinearLayout
                 android:id="@+id/LayoutCombobox21"
                 android:layout_width="match_parent"
@@ -254,13 +250,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.4"
                     style="@style/TextView"
-                    android:text="Ingrese su apellido"/>
+                    android:text="¿Desea adquirir el producto?"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.6"
-                    android:orientation="horizontal"></LinearLayout>
+
             </LinearLayout>
 
             <!-- LAYOUT COMBOBOX EDITTEXT -->
@@ -280,13 +272,20 @@
                 android:layout_weight="0.36"
                 android:orientation="vertical">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                <Button
+                    android:id="@+id/btn_llamar"
+                    android:layout_width="143dp"
+                    android:layout_height="match_parent"
+                    android:text="Llamar"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="#1F4282"
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
 
-            <!-- LAYOUT TEXTVIEW edad -->
+            <!-- LAYOUT TEXTVIEW OTRO -->
             <LinearLayout
                 android:id="@+id/LayoutCombobox2"
                 android:layout_width="match_parent"
@@ -299,13 +298,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.4"
                     style="@style/TextView"
-                    android:text="Ingrese su edad"/>
+                    android:text="¿El resultado no fue el esperado?"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.6"
-                    android:orientation="horizontal"></LinearLayout>
+
             </LinearLayout>
 
             <!-- LAYOUT COMBOBOX EDITTEXT -->
@@ -327,8 +322,7 @@
 
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="phone"/>
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 
@@ -343,13 +337,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.4"
                     style="@style/TextView"
-                    android:text="Inserte sus ingresos"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.6"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:text="¿Qué tipo de crédito le interesaria adquirir?"/>
             </LinearLayout>
             <!-- LAYOUT COMBOBOX -->
             <LinearLayout
@@ -361,8 +349,7 @@
 
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="phone"/>
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 
@@ -371,7 +358,7 @@
                 android:id="@+id/LayoutCombobox6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.33"
+                android:layout_weight="0.4"
                 android:orientation="horizontal">
 
                 <!-- ESPACIO BLANCO IZQUIERDA -->
@@ -382,15 +369,8 @@
                 </LinearLayout>
 
                 <!-- LAYOUT BOTON CONTINUAR -->
-                <Button
-                    android:id="@+id/btn_continuar"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.32"
-                    android:orientation="vertical"
-                    android:background="@drawable/continuar">
 
-                </Button>
+
 
                 <!-- ESPACIO BLANCO DERECHA -->
                 <LinearLayout

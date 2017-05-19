@@ -1,7 +1,10 @@
 package com.example.jrubiaob.bida;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.Entry;
@@ -10,14 +13,18 @@ import com.github.mikephil.charting.data.PieDataSet;
 
 import java.util.ArrayList;
 
-public class Graph extends AppCompatActivity {
+public class Graph extends AppCompatActivity implements View.OnClickListener{
 
     private PieChart pieChart;
+    private Button btnAvanzar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
+
+        this.btnAvanzar = (Button)findViewById(R.id.btn_avanzar);
+        this.btnAvanzar.setOnClickListener(this);
 
         pieChart = (PieChart) findViewById(R.id.pieChart);
 
@@ -65,5 +72,13 @@ public class Graph extends AppCompatActivity {
         pieChart.setDescription("");
         /*Ocultar leyenda*/
         pieChart.setDrawLegend(false);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view == btnAvanzar){
+            Intent intent = new Intent(this, Encuesta.class);
+            startActivity(intent);
+        }
     }
 }

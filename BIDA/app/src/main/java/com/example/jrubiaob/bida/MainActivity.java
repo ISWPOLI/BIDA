@@ -2,6 +2,7 @@ package com.example.jrubiaob.bida;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 while(jumpTime < totalProgressTime) {
                     try {
-                        jumpTime += 3;
+                        jumpTime += 5;
                         progress.setProgress(jumpTime);
                         sleep(200);
                     }
@@ -54,17 +55,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Log.e("BIDA", e.getMessage());
                     }
                 }
+                progress.cancel();
+
+                Intent i = new Intent(MainActivity.this, Graph.class);
+                startActivity(i);
+                 
             }
         };
         t.start();
+
     }
+
 
     @Override
     public void onClick(View v) {
         if(v == this.btnContinuar){
             this.analizar(v);
-            Intent intent = new Intent(this,Graph.class);
-            startActivity(intent);
+
         }
     }
 }
