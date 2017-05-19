@@ -1,18 +1,430 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.jrubiaob.bida.MainActivity">
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+
+    <!-- LAYOUT SUPERIOR-->
+    <LinearLayout
+        android:id="@+id/LayoutUp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.44"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.42"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.43"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <!-- LOGO BANCOLOMBIA -->
+            <Button
+                android:id="@+id/btn_bancolombia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bida">
+            </Button>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.445"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- LAYOUT DERECHO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0.11">
+
+            <!-- ESPACIO IZQUIERDO DEL LOGO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.12"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <!-- LAYOUT QUE TIENE EL LOGO DE Q-ANTICA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.38"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.39">
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_qantica"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bbva"
+                    android:orientation="horizontal">
+                </Button>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.39">
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ESPACIO DERECHO DEL LOGO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.47"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--- LAYOUT CENTRAL (BLANCO) -->
+    <LinearLayout
+        android:id="@+id/LayoutCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.12"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <!-- ESPACIO A LA IZQUIERDA -->
+        <LinearLayout
+            android:id="@+id/LayoutRecarga1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.36"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <!-- LAYOUT LOGO RECARGAS -->
+        <LinearLayout
+            android:id="@+id/LayoutRecarga2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.38"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@drawable/logo">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4">
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- LAYOUT DERECHA LOGO -->
+        <LinearLayout
+            android:id="@+id/LayoutRecarga3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.43"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <!-- LAYOUT LINEA AZUL -->
+        <LinearLayout
+            android:id="@+id/LayoutRecarga4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.451"
+            android:background="#1F4282"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <!-- LAYOUT IZQUIERDA COMBOBOX -->
+        <LinearLayout
+            android:id="@+id/LayoutRecarga5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.43"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <!-- LAYOUT COMBOBOX -->
+        <LinearLayout
+            android:id="@+id/LayoutRecarga6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/LayoutCombobox1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.41"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <!-- LAYOUT TEXTVIEW NOMBRE -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.37"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    style="@style/TextView"
+                    android:text="Ingrese su nombre"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+            <!-- LAYOUT COMBOBOX EDITTEXT -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.39"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <!-- LAYOUT COMBOBOX -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.36"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <!-- LAYOUT TEXTVIEW APELLIDO -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.37"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    style="@style/TextView"
+                    android:text="Ingrese su apellido"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+            <!-- LAYOUT COMBOBOX EDITTEXT -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox31"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.39"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <!-- LAYOUT COMBOBOX -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox41"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.36"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <!-- LAYOUT TEXTVIEW edad -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.37"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    style="@style/TextView"
+                    android:text="Ingrese su edad"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+
+            <!-- LAYOUT COMBOBOX EDITTEXT -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.39"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <!-- LAYOUT COMBOBOX -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox42"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.36"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutCombobox5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    style="@style/TextView"
+                    android:text="Inserte sus ingresos"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+            <!-- LAYOUT COMBOBOX -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox40"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.36"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <!-- LAYOUT BOTON CONTINUAR -->
+            <LinearLayout
+                android:id="@+id/LayoutCombobox6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:orientation="horizontal">
+
+                <!-- ESPACIO BLANCO IZQUIERDA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.34">
+                </LinearLayout>
+
+                <!-- LAYOUT BOTON CONTINUAR -->
+                <Button
+                    android:id="@+id/btn_continuar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.32"
+                    android:orientation="vertical"
+                    android:background="@drawable/continuar">
+
+                </Button>
+
+                <!-- ESPACIO BLANCO DERECHA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.34">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutCombobox7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.32"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- LAYOUT DERECHA COMBOBOX -->
+        <LinearLayout
+            android:id="@+id/LayoutRecarga7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.36"
+            android:orientation="vertical">
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- LAYOUT INFERIOR-->
+    <LinearLayout
+        android:id="@+id/LayoutDown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.44"
+        android:orientation="horizontal"
+        android:background="#1F4282">
+    </LinearLayout>
+</LinearLayout>
