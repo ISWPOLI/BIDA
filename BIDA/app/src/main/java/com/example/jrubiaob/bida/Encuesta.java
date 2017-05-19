@@ -12,6 +12,8 @@ import android.widget.Button;
 public class Encuesta extends AppCompatActivity implements View.OnClickListener{
 
     private Button btnLlamar;
+    private Button btnBBVA;
+    private Button btnBida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,17 +21,30 @@ public class Encuesta extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.activity_encuesta);
 
         this.btnLlamar = (Button)findViewById(R.id.btn_llamar);
+        this.btnBBVA = (Button)findViewById(R.id.btn_bbvaencuesta);
+        this.btnBida = (Button)findViewById(R.id.btn_bidaencuesta);
+
+        this.btnBida.setOnClickListener(this);
+        this.btnBBVA.setOnClickListener(this);
         btnLlamar.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View view) {
-        if(view == btnLlamar){
+    public void onClick(View v) {
+        if(v == btnLlamar){
             int permissionCheck = ContextCompat.checkSelfPermission(this,
                     Manifest.permission.CALL_PHONE);
             Intent i = new Intent(Intent.ACTION_DIAL);
             i.setData(Uri.parse("tel:3212582365"));
             startActivity(i);
+        }if(v == this.btnBBVA){
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://www.bbva.com.co/"));
+            startActivity(intent);
+        }if(v == this.btnBida){
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://bida1.000webhostapp.com/"));
+            startActivity(intent);
         }
     }
 }

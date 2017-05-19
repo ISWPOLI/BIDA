@@ -2,6 +2,7 @@ package com.example.jrubiaob.bida;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,12 +24,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         this.btnContinuar = (Button)findViewById(R.id.btn_continuar);
-        this.btnBBVA = (Button)findViewById(R.id.btn_bbva);
-        this.btnBida = (Button)findViewById(R.id.btn_bida);
+        this.btnBBVA = (Button)findViewById(R.id.btn_bbvamain);
+        this.btnBida = (Button)findViewById(R.id.btn_bidamain);
 
-        this.btnContinuar.setOnClickListener(this);
         this.btnBida.setOnClickListener(this);
         this.btnBBVA.setOnClickListener(this);
+        this.btnContinuar.setOnClickListener(this);
+
     }
 
     public void analizar(View view){
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     try {
                         jumpTime += 5;
                         progress.setProgress(jumpTime);
-                        sleep(200);
+                        sleep(500);
                     }
                     catch (InterruptedException e) {
                         Log.e("BIDA", e.getMessage());
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 Intent i = new Intent(MainActivity.this, Graph.class);
                 startActivity(i);
-                 
+
             }
         };
         t.start();
@@ -71,7 +73,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v == this.btnContinuar){
             this.analizar(v);
-
+        }if(v == this.btnBBVA){
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://www.bbva.com.co/"));
+            startActivity(intent);
+        }if(v == this.btnBida){
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://bida1.000webhostapp.com/"));
+            startActivity(intent);
         }
     }
 }

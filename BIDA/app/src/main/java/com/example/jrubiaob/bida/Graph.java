@@ -1,6 +1,7 @@
 package com.example.jrubiaob.bida;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,8 @@ public class Graph extends AppCompatActivity implements View.OnClickListener{
 
     private PieChart pieChart;
     private Button btnAvanzar;
+    private Button btnBBVA;
+    private Button btnBida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,11 @@ public class Graph extends AppCompatActivity implements View.OnClickListener{
 
         this.btnAvanzar = (Button)findViewById(R.id.btn_avanzar);
         this.btnAvanzar.setOnClickListener(this);
+        this.btnBBVA = (Button)findViewById(R.id.btn_bbvagraph);
+        this.btnBida = (Button)findViewById(R.id.btn_bidagraph);
+
+        this.btnBida.setOnClickListener(this);
+        this.btnBBVA.setOnClickListener(this);
 
         pieChart = (PieChart) findViewById(R.id.pieChart);
 
@@ -38,10 +46,10 @@ public class Graph extends AppCompatActivity implements View.OnClickListener{
 
 		/*creamos una lista para los valores Y*/
         ArrayList<Entry> valsY = new ArrayList<Entry>();
-        valsY.add(new Entry(40,0));
+        valsY.add(new Entry(60,0));
         valsY.add(new Entry(20,0));
         valsY.add(new Entry(10,0));
-        valsY.add(new Entry(30,0));
+        valsY.add(new Entry(10,0));
 
  		/*creamos una lista para los valores X*/
         ArrayList<String> valsX = new ArrayList<String>();
@@ -75,9 +83,17 @@ public class Graph extends AppCompatActivity implements View.OnClickListener{
     }
 
     @Override
-    public void onClick(View view) {
-        if(view == btnAvanzar){
+    public void onClick(View v) {
+        if(v == btnAvanzar){
             Intent intent = new Intent(this, Encuesta.class);
+            startActivity(intent);
+        }if(v == this.btnBBVA){
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://www.bbva.com.co/"));
+            startActivity(intent);
+        }if(v == this.btnBida){
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://bida1.000webhostapp.com/"));
             startActivity(intent);
         }
     }

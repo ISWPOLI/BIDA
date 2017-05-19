@@ -37,7 +37,7 @@
 
             <!-- LOGO BANCOLOMBIA -->
             <Button
-                android:id="@+id/btn_bida"
+                android:id="@+id/btn_bidagraph"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -82,7 +82,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/btn_bbva"
+                    android:id="@+id/btn_bbvagraph"
                     android:layout_width="match_parent"
                     android:layout_height="58dp"
                     android:background="@drawable/bbva"
